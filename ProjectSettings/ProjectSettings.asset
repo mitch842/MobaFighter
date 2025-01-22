@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 28
-  productGUID: ba38d0d1285ee054cab18bcdac3f6c66
+  productGUID: adb77c2980ca36f45a8743705f5d4d23
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -930,10 +930,10 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 64e3ee11-fea1-4332-a3da-30d9632219be
+  cloudProjectId: 21963b61-c615-404d-a002-446c1e46f29e
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: MobaFighter
+  projectName: MobaFighter 2025-01-22_10-41-54
   organizationId: mitch842
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
