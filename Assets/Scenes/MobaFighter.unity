@@ -4292,6 +4292,7 @@ GameObject:
   - component: {fileID: 1246416315}
   - component: {fileID: 1246416317}
   - component: {fileID: 1246416316}
+  - component: {fileID: 1246416318}
   m_Layer: 0
   m_Name: Tilemap
   m_TagString: Untagged
@@ -4404,6 +4405,44 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!19719996 &1246416318
+TilemapCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246416314}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_MaximumTileChangeCount: 1000
+  m_ExtrusionFactor: 0
+  m_UseDelaunayMesh: 0
 --- !u!1001 &1294561745
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4492,7 +4531,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5406158310530828915, guid: 4c509139249a7824c91b838a487d8d29, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6357355593585284065, guid: 4c509139249a7824c91b838a487d8d29, type: 3}
@@ -4507,7 +4547,10 @@ PrefabInstance:
       addedObject: {fileID: 1866539729}
     - targetCorrespondingSourceObject: {fileID: 4868973739121495479, guid: 4c509139249a7824c91b838a487d8d29, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1866539730}
+      addedObject: {fileID: 1866539731}
+    - targetCorrespondingSourceObject: {fileID: 4868973739121495479, guid: 4c509139249a7824c91b838a487d8d29, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1866539735}
   m_SourcePrefab: {fileID: 100100000, guid: 4c509139249a7824c91b838a487d8d29, type: 3}
 --- !u!1 &1308255529
 GameObject:
@@ -4713,8 +4756,46 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &1866539730
-BoxCollider2D:
+--- !u!114 &1866539731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866539723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57cf58667897da74ba2c35509c50cfe3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  horizontalMovement: 0
+  verticalMovement: 0
+  runAnimationName: run
+  idleAnimationName: idle_1
+  walkAnimationName: walk
+  atkAnimationName_1: shield_attack
+  atkAnimationName_2: sword_attack
+  jumpAnimationName: jump
+  hitAnimationName: hit
+  deathAnimationName: dead
+  stunAnimationName: stun
+  skillAnimationName_1: buff_1
+  skillAnimationName_2: buff_2
+  skillAnimationName_3: buff_3
+  upKey: 0
+  downKey: 0
+  leftKey: 0
+  rightKey: 0
+  attackKey: 323
+  rb: {fileID: 1866539729}
+  groundCheck: {fileID: 435564871}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  movementSpeed: 20
+  jumpingPower: 35
+--- !u!70 &1866539735
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4747,18 +4828,9 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.17945898, y: 1.7563084}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 2.3027194, y: 3.515251}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.07029009, y: 1.7870675}
+  m_Size: {x: 1.7946949, y: 3.4905322}
+  m_Direction: 0
 --- !u!1 &1901755873
 GameObject:
   m_ObjectHideFlags: 0
